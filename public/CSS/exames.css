@@ -1,0 +1,242 @@
+.content {
+    background-color: var(--main-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1200px;
+    margin: 20px auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; 
+}
+
+/* Formulário */
+.content form {
+    background-color: var(--main-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 48%;
+}
+
+.content form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.content form label {
+    font-size: 0.9rem;
+    color: var(--header-text);
+}
+
+.content form select,
+.content form input,
+.content form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--header-border);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    background-color: var(--main-bg);
+    color: var(--header-text);
+}
+
+.content form select:focus,
+.content form input:focus,
+.content form textarea:focus {
+    border-color: var(--button-bg);
+    outline: none;
+}
+
+.content form button.btn-submit {
+    width: 100%;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content form button.btn-submit:hover {
+    background-color: var(--button-hover);
+}
+
+/* Tema Escuro */
+body.dark-mode .content {
+    background-color: var(--header-bg);
+}
+
+body.dark-mode .content form {
+    background-color: var(--main-bg);
+}
+
+body.dark-mode .content form label {
+    color: var(--sidebar-text);
+}
+
+body.dark-mode .content form select,
+body.dark-mode .content form input,
+body.dark-mode .content form textarea {
+    border-color: var(--header-border);
+    background-color: #333;
+    color: var(--header-text);
+}
+
+body.dark-mode .content form button.btn-submit {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+/* Área Principal */
+#form-exames,
+.exames-agendados {
+    flex: 1 1 48%;
+    background-color: var(--main-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--main-bg);
+}
+
+th, td {
+    border: 1px solid var(--header-border);
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    color: var(--header-text);
+}
+
+th {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+td {
+    background-color: var(--main-bg);
+    color: var(--header-text);
+    white-space: normal;
+    word-wrap: break-word;
+}
+h3{
+    color: var(--header-text);
+    margin-bottom: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; 
+}
+
+th:last-child,
+td:last-child {
+    width: 30%;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #form-exames,
+    .exames-agendados {
+        max-width: 100%;
+    }
+
+    .content form {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .content form button.btn-submit {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px;
+    }
+
+    .content form {
+        padding: 10px;
+    }
+
+    .content form label {
+        font-size: 0.8rem;
+    }
+
+    .content form select,
+    .content form input,
+    .content form textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .content form button.btn-submit {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
+
+/* Variáveis de Tema */
+:root {
+    --sidebar-bg: #F3F4F6;
+    --sidebar-text: #20232A;
+    --sidebar-title: #4A5568;
+    --sidebar-link: #20232A;
+    --sidebar-hover: #E2E8F0;
+
+    --main-bg: #FFFFFF;
+    --header-bg: #E2E8F0;
+    --header-border: #CBD5E0;
+    --header-text: #20232A;
+
+    --button-bg: #61DAFB;
+    --button-text: #FFFFFF;
+    --button-hover: #3182CE;
+}
+
+body.dark-mode {
+    --sidebar-bg: #20232A;
+    --sidebar-text: #FFFFFF;
+    --sidebar-title: #A0AEC0;
+    --sidebar-link: #A0AEC0;
+    --sidebar-hover: #2D3748;
+
+    --main-bg: #11161D;
+    --header-bg: #2D3748;
+    --header-border: #4A5568;
+    --header-text: #FFFFFF;
+
+    --button-bg: #61DAFB;
+    --button-text: #20232A;
+    --button-hover: #4A5568;
+}

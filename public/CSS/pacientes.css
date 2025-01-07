@@ -1,0 +1,165 @@
+/* Estilo para a seção de cadastro */
+.content {
+    padding: 20px;
+    background-color: var(--main-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Estilo para o formulário de cadastro */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.form-section label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--header-text);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-section input,
+.form-section select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--main-bg);
+    color: var(--header-text);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section input:focus,
+.form-section select:focus {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 5px var(--button-bg);
+    outline: none;
+}
+
+/* Estilo para o botão */
+.form-section button {
+    grid-column: 1 / -1;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Estilo para a seção de resultados */
+.result-section {
+    background-color: var(--header-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--header-text);
+    margin-bottom: 15px;
+}
+
+.result-section #result {
+    font-size: 1rem;
+    color: var(--header-text);
+    line-height: 1.5;
+}
+.paciente-card {
+    display: flex; /* Exibe o conteúdo lado a lado */
+    flex-wrap: wrap; /* Garante que o conteúdo se reorganize em telas menores */
+    justify-content: space-between; /* Texto à esquerda, imagem à direita */
+    align-items: center; /* Centraliza verticalmente os itens */
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--main-bg);
+}
+
+.paciente-card:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente o card ao passar o mouse */
+    transition: transform 0.2s ease;
+}
+
+.paciente-card .texto {
+    flex: 1; /* Texto ocupa o espaço restante */
+    margin-right: 20px; /* Espaçamento entre o texto e a imagem */
+    min-width: 250px; /* Garante espaço mínimo para o texto */
+}
+
+.paciente-card h3 {
+    font-size: 1.2rem;
+    color: var(--header-text);
+    margin-bottom: 10px;
+}
+
+.paciente-card p {
+    font-size: 1rem;
+    color: var(--header-text);
+    margin: 5px 0;
+}
+
+.foto-pet {
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    flex-shrink: 0; 
+    font-size: 80px;
+    margin-right: 150px;
+}
+
+
+
+/* Variáveis de Tema */
+:root {
+    --sidebar-bg: #F3F4F6;
+    --sidebar-text: #20232A;
+    --sidebar-title: #4A5568;
+    --sidebar-link: #20232A;
+    --sidebar-hover: #E2E8F0;
+
+    --main-bg: #FFFFFF;
+    --header-bg: #E2E8F0;
+    --header-border: #CBD5E0;
+    --header-text: #20232A;
+
+    --button-bg: #61DAFB;
+    --button-text: #FFFFFF;
+    --button-hover: #3182CE;
+}
+
+body.dark-mode {
+    --sidebar-bg: #20232A;
+    --sidebar-text: #FFFFFF;
+    --sidebar-title: #A0AEC0;
+    --sidebar-link: #A0AEC0;
+    --sidebar-hover: #2D3748;
+
+    --main-bg: #11161D;
+    --header-bg: #2D3748;
+    --header-border: #4A5568;
+    --header-text: #FFFFFF;
+
+    --button-bg: #61DAFB;
+    --button-text: #20232A;
+    --button-hover: #4A5568;
+}

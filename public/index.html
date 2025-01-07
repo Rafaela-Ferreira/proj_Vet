@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CSS/login.css">
+    <title>CLÍNICA VETERINÁRIA</title>
+    
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.1.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.1.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-performance-compat.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!--
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+    -->
+    
+  </head>
+  <body>
+    <div class="container">
+      <!-- Seção de Login -->
+      <div id="loginSection" class="form-section">
+        <h1>Login</h1>
+        <input id="emailLogin" type="email" placeholder="E-mail" required />
+        <input id="passwordLogin" type="password" placeholder="Senha" required />
+        <button id="loginBtn">Entrar</button>
+        <button id="googleLoginBtn">Entrar com Google</button>
+        <p class="error" id="errorLogin"></p>
+        <p>Não tem uma conta? <a href="#" id="toRegister">Cadastre-se</a></p>
+      </div>
+  
+      <!-- Seção de Cadastro -->
+      <div id="registerSection" class="form-section" style="display: none;">
+        <h1>Cadastro</h1>
+        <input id="emailRegister" type="email" placeholder="E-mail" required />
+        <input id="passwordRegister" type="password" placeholder="Senha" required />
+        <button id="registerBtn">Cadastrar</button>
+        <p class="error" id="errorRegister"></p>
+        <p>Já tem uma conta? <a href="#" id="toLogin">Faça login</a></p>
+      </div>
+    </div>
+  
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+      import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+  
+      // Configuração do Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyAqE26tmmE6U_k3FGye6l7_zD8fdOWW2dU",
+        authDomain: "proj-vet.firebaseapp.com",
+        projectId: "proj-vet",
+        storageBucket: "proj-vet.appspot.com",
+        messagingSenderId: "958492883361",
+        appId: "1:958492883361:web:c1ce9dd9fd1ffa860af3e0"
+      };
+  
+      // Inicializar Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+  
+      // Elementos DOM
+      const loginSection = document.getElementById("loginSection");
+      const registerSection = document.getElementById("registerSection");
+      const toRegisterLink = document.getElementById("toRegister");
+      const toLoginLink = document.getElementById("toLogin");
+      const loginBtn = document.getElementById("loginBtn");
+      const registerBtn = document.getElementById("registerBtn");
+      const emailLogin = document.getElementById("emailLogin");
+      const passwordLogin = document.getElementById("passwordLogin");
+      const emailRegister = document.getElementById("emailRegister");
+      const passwordRegister = document.getElementById("passwordRegister");
+      const errorLogin = document.getElementById("errorLogin");
+      const errorRegister = document.getElementById("errorRegister");
+      const googleLoginBtn = document.getElementById("googleLoginBtn");  // Botão de login com Google
+  
+      // Alternar para a seção de cadastro
+      toRegisterLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginSection.style.display = "none";
+        registerSection.style.display = "block";
+      });
+  
+      // Alternar para a seção de login
+      toLoginLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        registerSection.style.display = "none";
+        loginSection.style.display = "block";
+      });
+  
+      // Função de login com e-mail e senha
+      loginBtn.addEventListener("click", async () => {
+        const email = emailLogin.value;
+        const password = passwordLogin.value;
+        errorLogin.textContent = "";
+  
+        try {
+          const userCredential = await signInWithEmailAndPassword(auth, email, password);
+          alert(`Bem-vindo, ${userCredential.user.email}`);
+          window.location.href = "Home.html";  // Redirecionar para home após login
+        } catch (error) {
+          errorLogin.textContent = "Erro ao realizar login: " + error.message;
+        }
+      });
+  
+      // Função de login com Google
+      googleLoginBtn.addEventListener("click", async () => {
+        const provider = new GoogleAuthProvider();
+        try {
+          const result = await signInWithPopup(auth, provider);
+          const user = result.user;
+          alert(`Bem-vindo, ${user.displayName}`);
+          window.location.href = "Home.html";  // Redirecionar para home após login com Google
+        } catch (error) {
+          console.error("Erro ao realizar login com Google:", error.message);
+          alert("Erro ao fazer login com Google: " + error.message);
+        }
+      });
+  
+      // Função de cadastro
+      registerBtn.addEventListener("click", async () => {
+        const email = emailRegister.value;
+        const password = passwordRegister.value;
+        errorRegister.textContent = "";
+  
+        try {
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          alert(`Usuário cadastrado com sucesso: ${userCredential.user.email}`);
+        } catch (error) {
+          errorRegister.textContent = "Erro ao realizar cadastro: " + error.message;
+        }
+      });
+    </script>
+  </body>
+</html>

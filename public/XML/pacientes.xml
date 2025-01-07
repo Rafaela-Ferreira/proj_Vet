@@ -1,0 +1,20 @@
+<pacientes>
+    <paciente>
+        <nomeTutor>João Silva</nomeTutor>
+        <telefoneTutor>123456789</telefoneTutor>
+        <emailTutor>joao@email.com</emailTutor>
+        <nomePet>Rex</nomePet>
+        <especie>Cachorro</especie>
+        <peso>12.5</peso>
+        <fotoPet></fotoPet>
+    </paciente>
+    <paciente>
+        <nomeTutor>Maria Souza</nomeTutor>
+        <telefoneTutor>987654321</telefoneTutor>
+        <emailTutor>maria@email.com</emailTutor>
+        <nomePet>Luna</nomePet>
+        <especie>Gato</especie>
+        <peso>4.2</peso>
+        <fotoPet></fotoPet>
+    </paciente>
+</pacientes>

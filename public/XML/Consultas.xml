@@ -1,0 +1,105 @@
+<consultas>
+  <!-- Dezembro -->
+  <consulta>
+    <id>1</id>
+    <status>Aberta</status>
+    <data>2024-12-15</data>
+    <descricao>Consulta de rotina para vacinação</descricao>
+  </consulta>
+  <consulta>
+    <id>2</id>
+    <status>Atrasada</status>
+    <data>2024-12-01</data>
+    <descricao>Consulta de emergência</descricao>
+  </consulta>
+  <consulta>
+    <id>3</id>
+    <status>Concluída</status>
+    <data>2024-12-20</data>
+    <descricao>Retorno para exames</descricao>
+  </consulta>
+  <consulta>
+    <id>4</id>
+    <status>Cancelada</status>
+    <data>2024-12-10</data>
+    <descricao>Consulta cancelada pelo tutor</descricao>
+  </consulta>
+  
+  <!-- Janeiro -->
+  <consulta>
+    <id>5</id>
+    <status>Aberta</status>
+    <data>2025-01-05</data>
+    <descricao>Acompanhamento pós-cirúrgico</descricao>
+  </consulta>
+  <consulta>
+    <id>6</id>
+    <status>Concluída</status>
+    <data>2025-01-15</data>
+    <descricao>Check-up geral</descricao>
+  </consulta>
+  <consulta>
+    <id>7</id>
+    <status>Cancelada</status>
+    <data>2025-01-10</data>
+    <descricao>Consulta cancelada por problemas técnicos</descricao>
+  </consulta>
+  <consulta>
+    <id>8</id>
+    <status>Aberta</status>
+    <data>2025-01-25</data>
+    <descricao>Vacinação antirrábica</descricao>
+  </consulta>
+
+  <!-- Fevereiro -->
+  <consulta>
+    <id>9</id>
+    <status>Atrasada</status>
+    <data>2025-02-02</data>
+    <descricao>Consulta de emergência por ferimento</descricao>
+  </consulta>
+  <consulta>
+    <id>10</id>
+    <status>Concluída</status>
+    <data>2025-02-18</data>
+    <descricao>Exames laboratoriais</descricao>
+  </consulta>
+  <consulta>
+    <id>11</id>
+    <status>Cancelada</status>
+    <data>2025-02-12</data>
+    <descricao>Consulta cancelada devido a atraso</descricao>
+  </consulta>
+  <consulta>
+    <id>12</id>
+    <status>Aberta</status>
+    <data>2025-02-28</data>
+    <descricao>Consulta de rotina para avaliação clínica</descricao>
+  </consulta>
+
+  <!-- Março -->
+  <consulta>
+    <id>13</id>
+    <status>Concluída</status>
+    <data>2025-03-10</data>
+    <descricao>Retorno para ajuste de medicamentos</descricao>
+  </consulta>
+  <consulta>
+    <id>14</id>
+    <status>Cancelada</status>
+    <data>2025-03-05</data>
+    <descricao>Consulta cancelada por mudança de horário</descricao>
+  </consulta>
+  <consulta>
+    <id>15</id>
+    <status>Atrasada</status>
+    <data>2025-03-15</data>
+    <descricao>Consulta urgente para dor abdominal</descricao>
+  </consulta>
+  <consulta>
+    <id>16</id>
+    <status>Aberta</status>
+    <data>2025-03-25</data>
+    <descricao>Acompanhamento para controle de peso</descricao>
+  </consulta>
+</consultas>

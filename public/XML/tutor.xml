@@ -1,0 +1,18 @@
+<dados>
+  <tutores>
+    <tutor id="1">
+      <nome>João Silva</nome>
+    </tutor>
+    <tutor id="2">
+      <nome>Maria Oliveira</nome>
+    </tutor>
+  </tutores>
+  <pacientes>
+    <paciente id="1" tutorId="1">
+      <nome>Rex</nome>
+    </paciente>
+    <paciente id="2" tutorId="2">
+      <nome>Bolinha</nome>
+    </paciente>
+  </pacientes>
+</dados>
