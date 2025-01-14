@@ -1,6 +1,6 @@
 # proj_Vet - Sistema para Clínica Veterinária 🐾
 
-**proj_Vet** é um sistema desenvolvido para gerenciar uma clínica veterinária, incluindo funcionalidades como agendamento de consultas, cadastro de animais e clientes, controle de estoques e relatórios. Este projeto utiliza Firebase para autenticação, banco de dados e hospedagem.
+**proj_Vet** é um sistema desenvolvido para gerenciar uma clínica veterinária, incluindo funcionalidades como agendamento de consultas, cadastro de animais e clientes, controle de estoques e relatórios. Este projeto utiliza Firebase para autenticação e hospedagem.
 
 ## 🌐 Acesse o Sistema
 
