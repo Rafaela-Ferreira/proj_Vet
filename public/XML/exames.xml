@@ -1,17 +1,17 @@
 <exames>
   <exame>
     <tipo>Ultrassonografia</tipo>
-    <paciente>João Silva</paciente>
+    <paciente>rocky</paciente>
     <data>2025-01-03</data>
     <hora>10:00</hora>
-    <observacoes>Vacinação contra raiva</observacoes>
+    <observacoes>Ultrassonografia</observacoes>
   </exame>
   <exame>
     <tipo>Raio-X</tipo>
-    <paciente>Maria Oliveira</paciente>
+    <paciente>maggie</paciente>
     <data>2025-01-04</data>
     <hora>14:00</hora>
-    <observacoes>Vacinação contra raiva</observacoes>
+    <observacoes>Raio-X da pata esquerda</observacoes>
   </exame>
   <exame>
     <tipo>Vacina</tipo>

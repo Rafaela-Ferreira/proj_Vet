@@ -54,19 +54,19 @@
   <!-- Fevereiro -->
   <consulta>
     <id>9</id>
-    <status>Atrasada</status>
+    <status>Aberta</status>
     <data>2025-02-02</data>
     <descricao>Consulta de emergência por ferimento</descricao>
   </consulta>
   <consulta>
     <id>10</id>
-    <status>Concluída</status>
+    <status>Aberta</status>
     <data>2025-02-18</data>
     <descricao>Exames laboratoriais</descricao>
   </consulta>
   <consulta>
     <id>11</id>
-    <status>Cancelada</status>
+    <status>Aberta</status>
     <data>2025-02-12</data>
     <descricao>Consulta cancelada devido a atraso</descricao>
   </consulta>
@@ -80,19 +80,19 @@
   <!-- Março -->
   <consulta>
     <id>13</id>
-    <status>Concluída</status>
+    <status>Aberta</status>
     <data>2025-03-10</data>
     <descricao>Retorno para ajuste de medicamentos</descricao>
   </consulta>
   <consulta>
     <id>14</id>
-    <status>Cancelada</status>
+    <status>Aberta</status>
     <data>2025-03-05</data>
     <descricao>Consulta cancelada por mudança de horário</descricao>
   </consulta>
   <consulta>
     <id>15</id>
-    <status>Atrasada</status>
+    <status>Aberta</status>
     <data>2025-03-15</data>
     <descricao>Consulta urgente para dor abdominal</descricao>
   </consulta>

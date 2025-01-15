@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Função para carregar os exames do XML e exibir na tabela
     function carregarExames() {
       fetch('./XML/exames.xml')
         .then(response => response.text())
@@ -33,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Erro ao carregar XML de exames:", error));
     }
   
-    // Função para adicionar um novo exame na tabela (simulado)
     function adicionarExameNaTabela(tipo, paciente, data, hora, observacoes) {
         const tabelaBody = document.querySelector("#tabela-exames tbody");
       
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tabelaBody.appendChild(row);
     }
   
-    // Função de validação do formulário
+    //validação do formulário
     function validarFormulario(event) {
         event.preventDefault();
       

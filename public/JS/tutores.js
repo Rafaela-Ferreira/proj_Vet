@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const tutorSelect = document.getElementById("tutor");
   
-    // Função para carregar tutores do arquivo XML
     function carregarTutores() {
       const xhr = new XMLHttpRequest();
       xhr.open("GET", "./XML/tutores.xml", true);
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     carregarTutores();
   });
 
-// Função de validação do formulário
 function validarFormulario(event) {
   event.preventDefault();
   const paciente = document.getElementById('paciente');

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const xmlFile = "XML/consultas.xml"; // Caminho para o arquivo XML
-    const tableBody = document.querySelector("#tabela-consultas tbody"); // Seleciona o corpo da tabela
+    const xmlFile = "XML/consultas.xml";
+    const tableBody = document.querySelector("#tabela-consultas tbody");
 
     fetch(xmlFile)
         .then(response => {

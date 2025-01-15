@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./CSS/estiloBase.css">
-  <link rel="stylesheet" href="./CSS/consulta.css">
+  <link rel="stylesheet" href="./CSS/contato.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <title>Clínica Veterinária</title>
 </head>
@@ -16,8 +16,8 @@
     </button>
     <ul>
       <li><a href="./Home.html"><i class="bi bi-house-door"></i><span>Início</span></a></li>
-      <li><a href="./Consulta.html"><i class="bi bi-clipboard"></i><span>Consultas</span></a></li>
-      <li><a href="./Agendamento.html"><i class="bi bi-calendar"></i><span>Agendamentos</span></a></li>
+      <li><a href="./Consulta.html"><i class="bi bi-calendar"></i><span>Consultas</span></a></li>
+      <li><a href="./Agendamento.html"><i class="bi bi-clipboard"></i><span>Agendamentos</span></a></li>
       <li><a href="./Exames.html"><i class="bi bi-file-earmark-medical"></i><span>Exames</span></a></li>
       <li><a href="./Pacientes.html"><i class="bi bi-person"></i><span>Pacientes</span></a></li>
       <li><a href="#"><i class="bi bi-people"></i><span>Equipe</span></a></li>
@@ -31,6 +31,7 @@
 
   <!-- Área principal -->
   <div class="main-content">
+    
     <div class="header">
       <h1>Bem-vindo à Agro Suaçuna</h1>
       <div class="search-bar">
@@ -45,62 +46,25 @@
         </div>
       </div>
     </div>
-
     <div class="content">
-      <!-- Agenda -->
-      <div class="right-panel">
-        <header class="topbar">
-          <h1>AGENDA</h1>
-        </header>
-        <section class="status-cards">
-          <div class="card" onclick="filtrarConsultas('Aberta')">Aberta<br><span id="aberta-count">0</span></div>
-          <div class="card" onclick="filtrarConsultas('Atrasada')">Atrasada<br><span id="atrasada-count">0</span></div>
-          <div class="card" onclick="filtrarConsultas('Concluída')">Concluída<br><span id="concluida-count">0</span></div>
-          <div class="card" onclick="filtrarConsultas('Cancelada')">Cancelada<br><span id="cancelada-count">0</span></div>
-        </section>
+      <h1>Contato</h1>
+      <div class="group-member">
+          <p><strong>Nome:</strong> Rafaela</p>
+          <p><strong>RA:</strong> CP3026353</p>
+          <p><strong>Email:</strong> f.rafaela@aluno.ifsp.edu.br</p>
       </div>
-
-      <!-- Calendário -->
-      <div class="calendar-container">
-        <h2>Calendário</h2>
-        <div id="calendar">
-          <div class="calendar-header">
-            <button id="prevMonth">&lt;</button>
-            <span id="currentMonth"></span>
-            <button id="nextMonth">&gt;</button>
-          </div>
-          <div class="calendar-grid">
-            <div class="calendar-days">
-              <div>Dom</div>
-              <div>Seg</div>
-              <div>Ter</div>
-              <div>Qua</div>
-              <div>Qui</div>
-              <div>Sex</div>
-              <div>Sáb</div>
-            </div>
-            <div id="calendarDates" class="calendar-dates"></div>
-          </div>
-        </div>
-      </div> 
-    </div>
-    <div id="detalhesConsultas">
-      <h3>Detalhes da Consulta</h3>
-      <div id="consulta-detalhes">
-        <p>Selecione uma consulta no calendário para ver os detalhes.</p>
+      <div class="group-member">
+          <p><strong>Nome:</strong> Kezia</p>
+          <p><strong>RA:</strong> CP3025756</p>
+          <p><strong>Email:</strong> kezia.f@aluno.ifsp.edu.br</p>
       </div>
-    </div>
-    
-    </div>
-
+  </div>
     <footer>
       <p>&copy; 2024 Clínica Veterinária Agro Suaçuna</p>
     </footer>
   </div>
-
   <script src="./JS/tema.js"></script>
   <script src="./JS/pesquisa.js"></script>
   <script src="./JS/main.js"></script>
-  <script src="./JS/calendario.js"></script>
 </body>
 </html>

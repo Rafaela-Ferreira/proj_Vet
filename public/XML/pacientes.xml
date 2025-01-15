@@ -17,4 +17,22 @@
         <peso>4.2</peso>
         <fotoPet></fotoPet>
     </paciente>
+    <paciente>
+        <nomeTutor>Isabela Ferreira</nomeTutor>
+        <telefoneTutor>987654321</telefoneTutor>
+        <emailTutor>isabela@email.com</emailTutor>
+        <nomePet>rocky</nomePet>
+        <especie>Gato</especie>
+        <peso>4.2</peso>
+        <fotoPet></fotoPet>
+    </paciente>
+    <paciente>
+        <nomeTutor>Maria julia</nomeTutor>
+        <telefoneTutor>987654321</telefoneTutor>
+        <emailTutor>J.maria@email.com</emailTutor>
+        <nomePet>bob</nomePet>
+        <especie>Gato</especie>
+        <peso>4.2</peso>
+        <fotoPet></fotoPet>
+    </paciente>
 </pacientes>

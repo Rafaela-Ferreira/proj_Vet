@@ -3,7 +3,7 @@
 **proj_Vet** é um sistema desenvolvido para gerenciar uma clínica veterinária, incluindo funcionalidades como agendamento de consultas, cadastro de animais e clientes, controle de estoques e relatórios. Este projeto utiliza Firebase para autenticação e hospedagem.
 ## 🌐 Integrantes do grupo
 - Rafaela CP3026353
-- Kezia CP3025756
+- Kezia   CP3025756
 
 ## 🌐 Acesse o Sistema
 

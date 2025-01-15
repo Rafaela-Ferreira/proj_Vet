@@ -80,7 +80,7 @@
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
   
-      // Elementos DOM
+      
       const loginSection = document.getElementById("loginSection");
       const registerSection = document.getElementById("registerSection");
       const toRegisterLink = document.getElementById("toRegister");
@@ -93,7 +93,7 @@
       const passwordRegister = document.getElementById("passwordRegister");
       const errorLogin = document.getElementById("errorLogin");
       const errorRegister = document.getElementById("errorRegister");
-      const googleLoginBtn = document.getElementById("googleLoginBtn");  // Botão de login com Google
+      const googleLoginBtn = document.getElementById("googleLoginBtn");
   
       // Alternar para a seção de cadastro
       toRegisterLink.addEventListener("click", (e) => {

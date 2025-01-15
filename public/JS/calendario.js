@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Filtra as consultas pelo mês atual (para o calendário)
     function filtrarConsultasPorMes() {
-        const month = currentMonth.getMonth() + 1; // Mês atual (0-11, por isso adicionamos 1)
+        const month = currentMonth.getMonth() + 1; 
         const year = currentMonth.getFullYear(); // Ano atual
     
         return consultas.filter((consulta) => {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Renderiza o calendário com as consultas
     function renderCalendar() {
-        calendarDates.innerHTML = ""; // Limpa o calendário atual
+        calendarDates.innerHTML = ""; 
     
         // Obtém o primeiro dia da semana e a quantidade de dias no mês atual
         const firstDay = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1).getDay();
